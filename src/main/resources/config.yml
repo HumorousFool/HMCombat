@@ -1,0 +1,61 @@
+Locale: en
+
+# Modifies the 1.9 attack cooldown and no damage ticks
+EnableAttackCooldown: true
+AttackSpeedOverride: 16 #1.8: 16, 1.9+: 4
+PlayerNoDamageTicks: 18 #1.8: 18, 1.9+: 20
+EntityNoDamageTicks: 16 #1.8: 18, 1.9+: 20
+
+# Allows the use of custom attack speeds in seconds using mining fatigue
+EnableAttackSpeed: true
+EnableMaterialAttackSpeed: true # Otherwise just use the API to set speeds
+MaterialAttackSpeeds: # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  TRIDENT: 1
+  WOODEN_AXE: 2
+  GOLDEN_AXE: 2
+  STONE_AXE: 2
+  IRON_AXE: 2
+  DIAMOND_AXE: 2
+  NETHERITE_AXE: 2
+
+# Modifies knockback dealt by players
+EnableKnockbackMechanics: true
+EnableSprintCrits: true
+KnockbackHorizontal: 0.4D
+KnockbackVertical: 0.4D
+KnockbackVerticalLimit: 0.4D
+KnockbackExtraHorizontal: 0.5D
+KnockbackExtraVertical: 0.1D
+
+# Makes arrows perfectly accurate again and does not add the player's velocity to it
+EnableProjectileMechanics: true
+
+# Makes shields go on cooldown on every hit, axe cooldown is always 5 seconds (100 ticks)
+EnableShieldCooldown: true
+DefaultShieldCooldownTimePlayer: 30
+DefaultShieldCooldownTimeEntity: 30
+NoDamageTicksOnBlock: 18
+
+# Prevents the player from hearing the specified sounds
+EnableSoundBlocking: true
+BlockedSounds: # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+  - ENTITY_PLAYER_ATTACK_KNOCKBACK
+  - ENTITY_PLAYER_ATTACK_NODAMAGE
+  - ENTITY_PLAYER_ATTACK_STRONG
+  - ENTITY_PLAYER_ATTACK_WEAK
+  - ENTITY_PLAYER_ATTACK_SWEEP
+
+# Alters sweep attack damage
+DisableSweeping: false
+DisableSweepingParticles: true
+SweepingEnchantmentOnly: true
+
+# Max range at which blood particles should be seen
+CosmeticRange: 20
+
+# Adds a blood particle effect when damage is caused through the following
+EnableBlood: true
+BloodDamageCauses: # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  - ENTITY_ATTACK
+  - ENTITY_SWEEP_ATTACK
+  - PROJECTILE

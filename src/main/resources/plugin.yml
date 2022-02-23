@@ -1,0 +1,9 @@
+name: HMCombat
+version: ${project.version}
+main: io.github.humorousfool.hmcombat.HMCombat
+api-version: 1.16
+prefix: HMCombat
+depend: [ProtocolLib]
+authors: [HumorousFool]
+description: A minecraft combat rework plugin.
+website: https://humorousfool.github.io
